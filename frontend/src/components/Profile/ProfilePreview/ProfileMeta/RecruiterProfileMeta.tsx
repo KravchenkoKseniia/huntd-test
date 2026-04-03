@@ -17,14 +17,13 @@ export const RecruiterProfileMeta = React.memo<Props>((props) => {
       {items.map((item) => {
         if (item.name === RecruiterProfileMetaItems.City) {
           return (
-            <React.Fragment key={item.name}>
-              <IconLocation />
-              <li className={cn(styles.recruiterMetaItem,
-                typography.smallHeading)}
-              >
-                {item.text}
-              </li>
-            </React.Fragment>
+            <li
+              className={cn(styles.recruiterMetaItem, typography.smallHeading)}
+              key={item.name}
+            >
+              <IconLocation aria-hidden="true" />
+              {item.text}
+            </li>
           );
         }
 
